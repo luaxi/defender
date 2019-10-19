@@ -1,0 +1,28 @@
+# depslib dependency file v1.0
+1571465054 source:c:\users\lucas\prog\c\defender\src\gotoxy.c
+	<conio.h>
+	<Windows.h>
+
+1571496621 source:c:\users\lucas\prog\c\defender\src\main.c
+	<stdio.h>
+	<stdlib.h>
+	"../include/menu.h"
+	"../include/console.h"
+
+1571495121 source:c:\users\lucas\prog\c\defender\src\mainmenu.c
+	<stdio.h>
+
+1571495041 source:c:\users\lucas\prog\c\defender\src\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+
+1571495096 c:\users\lucas\prog\c\defender\include\menu.h
+
+1571496679 source:c:\users\lucas\prog\c\defender\src\console.c
+	<conio.h>
+	<stdlib.h>
+	<Windows.h>
+
+1571496596 c:\users\lucas\prog\c\defender\include\console.h
+
