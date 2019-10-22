@@ -3,7 +3,7 @@
 	<conio.h>
 	<Windows.h>
 
-1571496621 source:c:\users\lucas\prog\c\defender\src\main.c
+1571726121 source:c:\users\lucas\prog\c\defender\src\main.c
 	<stdio.h>
 	<stdlib.h>
 	"../include/menu.h"
@@ -12,17 +12,19 @@
 1571495121 source:c:\users\lucas\prog\c\defender\src\mainmenu.c
 	<stdio.h>
 
-1571495041 source:c:\users\lucas\prog\c\defender\src\menu.c
+1571725548 source:c:\users\lucas\prog\c\defender\src\menu.c
 	<stdio.h>
 	<stdlib.h>
 	<conio.h>
+	<windows.h>
+	"../include/console.h"
 
-1571495096 c:\users\lucas\prog\c\defender\include\menu.h
+1571726159 c:\users\lucas\prog\c\defender\include\menu.h
 
-1571496679 source:c:\users\lucas\prog\c\defender\src\console.c
+1571726160 source:c:\users\lucas\prog\c\defender\src\console.c
 	<conio.h>
 	<stdlib.h>
 	<Windows.h>
 
-1571496596 c:\users\lucas\prog\c\defender\include\console.h
+1571727475 c:\users\lucas\prog\c\defender\include\console.h
 
