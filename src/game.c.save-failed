@@ -1,0 +1,252 @@
+#include "../include/game.h"
+
+/**
+ * Lê o mapa da fase
+ *
+ */
+ int renderGame(save_t *save){
+
+    char map[MAP_LIN][MAP_COL] = {0}; /** Matriz onde o mapa será armazenado */
+    int coluna_inicial = 0; /** Coluna inicial a partir da qual o jogo será recortado */
+    int game_return = 0; /** Retorno do jogo */
+    enemy_t enemies[MAX_ENEMIES] = {0};
+    player_t player;
+
+    /* Limpa o console */
+    clearConsole();
+
+    /* Lê o mapa */
+    if(readMap(save, map, &player, enemies) == SUCCESS){
+
+        char carac, last_carac = '\0'; /** Caractere lido do teclado */
+
+        fillMap(map);
+
+        drawPlayer(map, &player);
+
+        do{
+            /* Reseta o caractere */
+            last_carac = carac;
+            carac = 0;
+
+            /* Lê o caractere do teclado e armazena em carac */
+            if(kbhit()) carac = getch();
+
+            switch(carac){
+                /* Caso o usuário aperte D (comando para a direita) */
+                case 'd':
+                case 'D':
+                    coluna_inicial = (coluna_inicial + 5) % MAP_COL;
+                    break;
+
+                // Movimento do mapa para a esquerda
+                //case 'a':
+                //case 'A':
+                //    if(coluna_inicial <= 0)
+                //        coluna_inicial += MAP_COL;
+                //    coluna_inicial = (coluna_inicial - 5) % MAP_COL;
+                //    break;
+            }
+
+            printMap(map, coluna_inicial);
+
+        }while(carac != 'p' && carac != 'P');
+
+
+    }else{ /* Erro ao ler o arquivo */
+        printf("Erro ao ler o arquivo!");
+    }
+
+    return game_return;
+
+ }
+
+/**
+ * Busca e lê o mapa que está em um arquivo de texto.
+ *
+ * @param level Fase do mapa
+ * @param map   Ponteiro da matriz onde será armazeado o mapa
+ */
+int readMap(save_t *save, char map[][MAP_COL], player_t *player, enemy_t enemies[MAX_ENEMIES]){
+
+    char c; /** Caractere lido */
+    char level_name[50]; /** Nome do arquivo do mapa */
+    int i = 0, j = 0, num_enemy = 0;
+    FILE *arq;
+
+    /* Formata nome do arquivo e salva em level_name */
+    sprintf(level_name, "levels/level_%d.txt", level);
+
+    /* Abre o arquivo */
+    arq = fopen(level_name, "r");
+
+    /* Caso haja erro na abertura */
+    if(arq == NULL){
+        return ERROR_LER_ARQUIVO;
+    }
+
+    /* Lê o arquivo (caractere por caractere) */
+    while((c = fgetc(arq)) != EOF){
+
+        /* Caso encontre uma quebra de linha */
+        if(c == '\n'){
+            i++;
+            j = 0;
+            continue;
+        }
+
+        /* Caso não seja um espaço em branco */
+        if(c != ' '){
+
+            if(save->flag_new_game == 1){
+                /* Caso seja o caractere do jogador, ponha sua posição na struct player_t*/
+                if(c == MAP_CHAR_PLAYER){
+                    player->position_x = j;
+                    player->position_y = i;
+                    player->last_x = j;
+                    player->last_y = i;
+
+                }else if(c == MAP_CHAR_ENEMY){
+                    if(num_enemy < 20){
+                        enemy_t enemy;
+
+                        enemy.position_x = i;
+                        enemy.position_y = j;
+
+                        enemies[num_enemy] = enemy;
+
+                        num_enemy++;
+                    }
+                }else{
+                    map[i][j] = c;
+                }
+            }else{
+
+            }
+        }
+
+        j++;
+    }
+
+    fclose(arq);
+
+    return SUCCESS;
+
+}
+
+/**
+ * Imprime o mapa no console a partir de uma coluna inicial.
+ *
+ * @param mapa              Matriz com os caracteres do mapa
+ * @param coluna_inicial    Coluna inicial do recorte do mapa
+ */
+void printMap(char map[][MAP_COL], int coluna_inicial){
+
+    int i, j;
+
+/*
+    /// Impressão do mapa por linha
+
+    for(i = 0; i < MAP_LIN; i++){
+        for(j = 0; j < SCREEN_COL; j++){
+            gotoxy(j, i);
+            printf("%c", map[i][(coluna_inicial + j) % MAP_COL]);
+        }
+    }
+*/
+
+    for(i = 0; i < SCREEN_COL; i++){
+        for(j = 0; j < MAP_LIN; j++){
+            gotoxy(i, j+1);
+            printf("%c", map[j][(coluna_inicial + i) % MAP_COL]);
+        }
+    }
+
+}
+
+/**
+ * Preenche o mapa com os caracteres especiais
+ * e encontra as posições do jogador e dos inimigos
+ *
+ * @param player_position   Ponteiro onde a posição do jogador será armazenada
+ * @param enemies_positions Matriz onde as posições dos inimigos serão armazenadas
+ */
+int fillMap(char map[][MAP_COL]){
+
+    int i, j;
+    int flag_fill;
+    char actual_char, last_char = '\0';
+
+    /* Percorre a matriz do mapa */
+    for(i = 0; i < MAP_COL; i++){
+
+        flag_fill = 1;
+
+        for(j = 0; j < MAP_LIN; j++){
+
+            actual_char = map[j][i];
+
+            /* Caso o caractere seja C */
+            if(map[j][i] == MAP_CHAR_WALL){
+
+                /* Caso não seja para preencher, começa a preencher */
+                if(last_char != MAP_CHAR_WALL){
+                    if(flag_fill == 0){
+                        flag_fill = 1;
+                    }else{ /* Caso seja para preencher, para de preencher */
+                        flag_fill = 0;
+                    }
+                }
+
+                /* Substitui o caractere */
+                map[j][i] = (char) CHAR_WALL;
+
+            /* Caso o caractere seja um elemento vazio */
+            }else if(map[j][i] == '\0'){
+
+                /* Caso seja para preencher, preenche */
+                if(flag_fill == 1){
+                    map[j][i] = (char) CHAR_WALL;
+                }
+
+            }
+
+            last_char = actual_char;
+
+        }
+    }
+
+
+    return 0;
+
+}
+
+/**
+ * Desenha o jogador no mapa com o formato:
+ * "@  "
+ * "@@@"
+ *
+ * @param map       Matriz com os caracteres do mapa
+ * @param player    Estrutura que armazena as informações do jogador
+ */
+void drawPlayer(char map[][MAP_COL], player_t *player){
+
+    map[player->position_y][player->position_x] = MAP_CHAR_PLAYER;
+    map[player->position_y][player->position_x + 1] = MAP_CHAR_PLAYER;
+    map[player->position_y][player->position_x + 2] = MAP_CHAR_PLAYER;
+    map[player->position_y - 1][player->position_x] = MAP_CHAR_PLAYER;
+}
+
+/**
+ * Apaga o jogador no mapa.
+ *
+ * @param map       Matriz com os caracteres do mapa
+ * @param player    Estrutura que armazena as informações do jogador
+ */
+void erasePlayer(char map[][MAP_COL], player_t *player){
+
+    map[player->last_y][player->last_x] = '\0';
+    map[player->last_y][player->last_x + 1] = '\0';
+    map[player->last_y][player->last_x + 2] = '\0';
+    map[player->last_y - 1][player->last_x] = '\0';
+}

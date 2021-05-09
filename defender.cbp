@@ -23,8 +23,12 @@
 			<Add option="-Wall" />
 		</Compiler>
 		<Unit filename="include/console.h" />
+		<Unit filename="include/game.h" />
 		<Unit filename="include/menu.h" />
 		<Unit filename="src/console.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="src/game.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="src/main.c">

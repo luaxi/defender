@@ -28,3 +28,317 @@
 
 1571727475 c:\users\lucas\prog\c\defender\include\console.h
 
+1573146125 source:\\homes\lspittelkow\desktop\defender\src\console.c
+	"../include/console.h"
+
+1574092654 source:\\homes\lspittelkow\desktop\defender\src\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	"../include/menu.h"
+	"../include/console.h"
+	"../include/game.h"
+
+1573146558 \\homes\lspittelkow\desktop\defender\include\menu.h
+
+1573146318 \\homes\lspittelkow\desktop\defender\include\console.h
+	<conio.h>
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+
+1574091280 source:\\homes\lspittelkow\desktop\defender\src\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<windows.h>
+	"../include/console.h"
+	"../include/menu.h"
+
+1574093203 source:\\homes\lspittelkow\desktop\defender\src\game.c
+	"../include/game.h"
+
+1574094101 \\homes\lspittelkow\desktop\defender\include\game.h
+	<stdio.h>
+	<stdlib.h>
+	"console.h"
+
+1574648433 source:c:\users\lucas\downloads\defender\defender\src\console.c
+	"../include/console.h"
+
+1574648510 c:\users\lucas\downloads\defender\defender\include\console.h
+	<conio.h>
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+
+1574656667 source:c:\users\lucas\downloads\defender\defender\src\game.c
+	"../include/game.h"
+
+1574656522 c:\users\lucas\downloads\defender\defender\include\game.h
+	<stdio.h>
+	<stdlib.h>
+	"console.h"
+
+1574656296 source:c:\users\lucas\downloads\defender\defender\src\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	"../include/menu.h"
+	"../include/console.h"
+	"../include/game.h"
+
+1574192752 c:\users\lucas\downloads\defender\defender\include\menu.h
+
+1574192770 source:c:\users\lucas\downloads\defender\defender\src\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<windows.h>
+	"../include/console.h"
+	"../include/menu.h"
+
+1574191733 source:\\homes\lspittelkow\downloads\defender\src\console.c
+	"../include/console.h"
+
+1574436785 \\homes\lspittelkow\downloads\defender\include\console.h
+	<conio.h>
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+
+1574438513 source:\\homes\lspittelkow\downloads\defender\src\game.c
+	"../include/game.h"
+
+1574438465 \\homes\lspittelkow\downloads\defender\include\game.h
+	<stdio.h>
+	<stdlib.h>
+	"console.h"
+
+1574193355 source:\\homes\lspittelkow\downloads\defender\src\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	"../include/menu.h"
+	"../include/console.h"
+	"../include/game.h"
+
+1574192751 \\homes\lspittelkow\downloads\defender\include\menu.h
+
+1574192768 source:\\homes\lspittelkow\downloads\defender\src\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<windows.h>
+	"../include/console.h"
+	"../include/menu.h"
+
+1574191734 source:\\homes\hpribeiro\desktop\defensor\defender\defender\src\console.c
+	"../include/console.h"
+
+1574436786 \\homes\hpribeiro\desktop\defensor\defender\defender\include\console.h
+	<conio.h>
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+
+1574193356 source:\\homes\hpribeiro\desktop\defensor\defender\defender\src\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	"../include/menu.h"
+	"../include/console.h"
+	"../include/game.h"
+
+1574192752 \\homes\hpribeiro\desktop\defensor\defender\defender\include\menu.h
+
+1574442342 \\homes\hpribeiro\desktop\defensor\defender\defender\include\game.h
+	<stdio.h>
+	<stdlib.h>
+	"console.h"
+
+1574192770 source:\\homes\hpribeiro\desktop\defensor\defender\defender\src\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<windows.h>
+	"../include/console.h"
+	"../include/menu.h"
+
+1574191734 source:\\homes\lspittelkow\downloads\defender\defender\src\console.c
+	"../include/console.h"
+
+1574436786 \\homes\lspittelkow\downloads\defender\defender\include\console.h
+	<conio.h>
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+
+1574443405 source:\\homes\lspittelkow\downloads\defender\defender\src\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	"../include/menu.h"
+	"../include/console.h"
+	"../include/game.h"
+
+1574192752 \\homes\lspittelkow\downloads\defender\defender\include\menu.h
+
+1574443588 \\homes\lspittelkow\downloads\defender\defender\include\game.h
+	<stdio.h>
+	<stdlib.h>
+	"console.h"
+
+1574192770 source:\\homes\lspittelkow\downloads\defender\defender\src\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<windows.h>
+	"../include/console.h"
+	"../include/menu.h"
+
+1574445134 source:\\homes\lspittelkow\downloads\defender\defender\src\game.c
+	"../include/game.h"
+
+1574648434 source:\\homes\lspittelkow\downloads\a\defender\src\console.c
+	"../include/console.h"
+
+1574695475 \\homes\lspittelkow\downloads\a\defender\include\console.h
+	<conio.h>
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+
+1574656298 source:\\homes\lspittelkow\downloads\a\defender\src\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	"../include/menu.h"
+	"../include/console.h"
+	"../include/game.h"
+
+1574192752 \\homes\lspittelkow\downloads\a\defender\include\menu.h
+
+1574697257 \\homes\lspittelkow\downloads\a\defender\include\game.h
+	<stdio.h>
+	<stdlib.h>
+	"console.h"
+
+1574192770 source:\\homes\lspittelkow\downloads\a\defender\src\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<windows.h>
+	"../include/console.h"
+	"../include/menu.h"
+
+1574696852 source:\\homes\lspittelkow\downloads\a\defender\src\game.c
+	"../include/game.h"
+
+1574648434 source:c:\users\lucas\downloads\defender\src\console.c
+	"../include/console.h"
+
+1574695475 c:\users\lucas\downloads\defender\include\console.h
+	<conio.h>
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+
+1574798398 source:c:\users\lucas\downloads\defender\src\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	"../include/menu.h"
+	"../include/console.h"
+	"../include/game.h"
+
+1574192752 c:\users\lucas\downloads\defender\include\menu.h
+
+1574794637 c:\users\lucas\downloads\defender\include\game.h
+	<stdio.h>
+	<stdlib.h>
+	"console.h"
+
+1574192770 source:c:\users\lucas\downloads\defender\src\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<windows.h>
+	"../include/console.h"
+	"../include/menu.h"
+
+1574798657 source:c:\users\lucas\downloads\defender\src\game.c
+	"../include/game.h"
+
+1574648434 source:c:\users\lucas\documents\defender\src\console.c
+	"../include/console.h"
+
+1574695476 c:\users\lucas\documents\defender\include\console.h
+	<conio.h>
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+
+1574822379 source:c:\users\lucas\documents\defender\src\game.c
+	"../include/game.h"
+
+1574821969 c:\users\lucas\documents\defender\include\game.h
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"console.h"
+
+1574821787 source:c:\users\lucas\documents\defender\src\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	"../include/menu.h"
+	"../include/console.h"
+	"../include/game.h"
+
+1574192752 c:\users\lucas\documents\defender\include\menu.h
+
+1574192770 source:c:\users\lucas\documents\defender\src\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<windows.h>
+	"../include/console.h"
+	"../include/menu.h"
+
+1574648434 source:c:\users\lucas\documents\lucas_pittelkow_-_henrique_peixoto\defender\src\console.c
+	"../include/console.h"
+
+1574695476 c:\users\lucas\documents\lucas_pittelkow_-_henrique_peixoto\defender\include\console.h
+	<conio.h>
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+
+1574822380 source:c:\users\lucas\documents\lucas_pittelkow_-_henrique_peixoto\defender\src\game.c
+	"../include/game.h"
+
+1574821970 c:\users\lucas\documents\lucas_pittelkow_-_henrique_peixoto\defender\include\game.h
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"console.h"
+
+1574822814 source:c:\users\lucas\documents\lucas_pittelkow_-_henrique_peixoto\defender\src\main.c
+	<stdio.h>
+	<stdlib.h>
+	<windows.h>
+	"../include/menu.h"
+	"../include/console.h"
+	"../include/game.h"
+
+1574192752 c:\users\lucas\documents\lucas_pittelkow_-_henrique_peixoto\defender\include\menu.h
+
+1574192770 source:c:\users\lucas\documents\lucas_pittelkow_-_henrique_peixoto\defender\src\menu.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<windows.h>
+	"../include/console.h"
+	"../include/menu.h"
+
